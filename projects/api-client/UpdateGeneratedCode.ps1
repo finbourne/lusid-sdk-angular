@@ -4,10 +4,6 @@ $genFullDir = Join-Path -Path $baseDir -ChildPath $genRelDir
 
 Get-ChildItem -Path $genFullDir -Include * | Remove-Item -Recurse
 
-Write-Host baseDir=$baseDir
-Write-Host genRelDir=$genRelDir
-Write-Host genFullDir=$genFullDir
-
 # Generate the required files
 docker run --rm -v ${baseDir}:/local `
     swaggerapi/swagger-codegen-cli generate `
