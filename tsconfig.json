@@ -22,6 +22,12 @@
       ],
       "api-client/*": [
         "dist/api-client/*"
+      ],
+      "lusid-sdk-angular6": [
+        "dist/lusid-sdk-angular6"
+      ],
+      "lusid-sdk-angular6/*": [
+        "dist/lusid-sdk-angular6/*"
       ]
     }
   }

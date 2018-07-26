@@ -1,5 +1,5 @@
 $baseDir = $PSScriptRoot
-$genRelDir = "src/lib/.generated"
+$genRelDir = "src/lib/generated"
 $genFullDir = Join-Path -Path $baseDir -ChildPath $genRelDir
 
 # Remove any existing generated files

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 baseDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-genRelDir="src/lib/.generated"
+genRelDir="src/lib/generated"
 genFullDir=$baseDir/$genRelDir
 
 # Remove any existing generated files
