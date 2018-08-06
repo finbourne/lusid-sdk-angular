@@ -1,11 +1,17 @@
 {
   "name": "@finbourne/lusid-sdk-angular6",
-  "version": "0.6.236",
+  "version": "0.6.250",
   "description": "An angular (6+) SDK for secure access to the LUSID&reg; by FINBOURNE web API",
   "keywords": [
-    "LUSID", "Finbourne", "SDK", "angular"
+    "LUSID", 
+    "Finbourne", 
+    "SDK", 
+    "angular"
   ],
-  "homepage": "https://github.com/finbourne/lusid-sdk-angular",
+  "homepage": "https://github.com/finbourne/lusid-sdk-angular/tree/master/projects/lusid-sdk-angular6",
+  "repository": {
+    "url": "https://github.com/finbourne/lusid-sdk-angular"
+  },
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/finbourne/lusid-sdk-angular/issues",
