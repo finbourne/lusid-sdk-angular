@@ -24,7 +24,7 @@ The code required to generate the SDK is in the `projects/lusid-sdk-angular6` fo
 
 * update the published [npm](https://preview.npmjs.com/package/@finbourne/lusid-sdk-angular6) package. From the `dist\lusid-sdk-angular6` folder 
 
-    `npm version` (to check the version number that will be used)
+    `cat package.json` (to check the version number that will be used)
 
     `npm publish` (*_you should not need to do this as the published version should be part of the LUSID CI process_*)
 )
