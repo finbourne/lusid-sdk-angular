@@ -1,11 +1,12 @@
 {
   "name": "@finbourne/edp-lusid-sdk-angular6",
-  "version": "0.0.1",
+  "version": "0.7.36",
   "description": "An angular (6+) SDK for secure access to the EDP LUSID&reg; by FINBOURNE web API",
   "keywords": [
     "LUSID", 
     "Finbourne", 
     "SDK", 
+    "EDP",
     "angular"
   ],
   "homepage": "https://github.com/finbourne/lusid-sdk-angular/tree/master/projects/edp-lusid-sdk-angular6",

@@ -8,7 +8,7 @@ Get-ChildItem -Path $genFullDir -Include * | Remove-Item -Recurse
 # Generate the required files
 docker run --rm -v ${baseDir}:/local `
     swaggerapi/swagger-codegen-cli generate `
-    -i <setme> `
+    -i https://raw.githubusercontent.com/finbourne/edp-lusid-sdk-java/master/edp-partners-lusid.json `
     -l typescript-angular `
     -o /local/$genRelDir
 
