@@ -12,7 +12,7 @@ fi
 # Generate the required files
 docker run --rm -v ${baseDir}:/local \
     swaggerapi/swagger-codegen-cli generate \
-    -i https://api.finbourne.com/swagger/v0/swagger.json \
+    -i <setme> \
     -l typescript-angular \
     -o /local/$genRelDir
 

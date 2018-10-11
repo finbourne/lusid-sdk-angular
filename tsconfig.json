@@ -28,6 +28,12 @@
       ],
       "lusid-sdk-angular6/*": [
         "dist/lusid-sdk-angular6/*"
+      ],
+      "edp-lusid-sdk-angular6": [
+        "dist/edp-lusid-sdk-angular6"
+      ],
+      "edp-lusid-sdk-angular6/*": [
+        "dist/edp-lusid-sdk-angular6/*"
       ]
     }
   }

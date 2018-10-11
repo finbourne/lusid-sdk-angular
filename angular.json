@@ -201,6 +201,46 @@
           }
         }
       }
+    },
+    "edp-lusid-sdk-angular6": {
+      "root": "projects/edp-lusid-sdk-angular6",
+      "sourceRoot": "projects/edp-lusid-sdk-angular6/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/edp-lusid-sdk-angular6/tsconfig.lib.json",
+            "project": "projects/edp-lusid-sdk-angular6/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/edp-lusid-sdk-angular6/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/edp-lusid-sdk-angular6/src/test.ts",
+            "tsConfig": "projects/edp-lusid-sdk-angular6/tsconfig.spec.json",
+            "karmaConfig": "projects/edp-lusid-sdk-angular6/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/edp-lusid-sdk-angular6/tsconfig.lib.json",
+              "projects/edp-lusid-sdk-angular6/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "lusid-sdk-angular"
