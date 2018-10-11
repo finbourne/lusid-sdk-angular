@@ -1,8 +1,24 @@
 {
-  "name": "edp-lusid-sdk-angular6",
+  "name": "@finbourne/edp-lusid-sdk-angular6",
   "version": "0.0.1",
+  "description": "An angular (6+) SDK for secure access to the EDP LUSID&reg; by FINBOURNE web API",
+  "keywords": [
+    "LUSID", 
+    "Finbourne", 
+    "SDK", 
+    "angular"
+  ],
+  "homepage": "https://github.com/finbourne/lusid-sdk-angular/tree/master/projects/edp-lusid-sdk-angular6",
+  "repository": {
+    "url": "https://github.com/finbourne/edp-lusid-sdk-angular"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/finbourne/edp-lusid-sdk-angular/issues",
+    "email": "edp-lusid-sdk-angular.issues@finbourne.com"
+  },
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0"
   }
 }
