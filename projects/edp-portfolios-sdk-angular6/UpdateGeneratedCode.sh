@@ -12,7 +12,7 @@ fi
 # Generate the required files
 docker run --rm -v ${baseDir}:/local \
     swaggerapi/swagger-codegen-cli generate \
-    -i https://raw.githubusercontent.com/finbourne/edp-lusid-sdk-java/master/edp-partners-lusid.json \
+    -i https://raw.githubusercontent.com/finbourne/edp-portfolios-sdk-java/master/edp-data-portfolios.json \
     -l typescript-angular \
     -o /local/$genRelDir
 

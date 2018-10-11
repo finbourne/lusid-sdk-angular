@@ -1,0 +1,26 @@
+{
+  "name": "@finbourne/edp-portfolios-sdk-angular6",
+  "version": "0.7.36",
+  "description": "An angular (6+) SDK for secure access to the EDP Portfolios by FINBOURNE web API",
+  "keywords": [
+    "LUSID", 
+    "Finbourne", 
+    "SDK", 
+    "EDP",
+    "Portfolios",
+    "angular"
+  ],
+  "homepage": "https://github.com/finbourne/lusid-sdk-angular/tree/master/projects/edp-portfolios-sdk-angular6",
+  "repository": {
+    "url": "https://github.com/finbourne/edp-portfolios-sdk-angular"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/finbourne/edp-portfolios-sdk-angular/issues",
+    "email": "edp-portfolios-sdk-angular.issues@finbourne.com"
+  },
+  "peerDependencies": {
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0"
+  }
+}
