@@ -1,15 +1,15 @@
 {
-  "name": "@finbourne/lusid-sdk-angular6",
+  "name": "@finbourne/lusid-sdk-angular7",
   "version": "0.7.124",
-  "description": "An angular (6+) SDK for secure access to the LUSID&reg; by FINBOURNE web API",
+  "description": "An angular (7+) SDK for secure access to the LUSID&reg; by FINBOURNE web API",
   "keywords": [
     "LUSID", 
     "Finbourne", 
     "SDK", 
     "angular",
-    "angular6"
+    "angular7"
   ],
-  "homepage": "https://github.com/finbourne/lusid-sdk-angular/tree/master/projects/lusid-sdk-angular6",
+  "homepage": "https://github.com/finbourne/lusid-sdk-angular/tree/master/projects/lusid-sdk-angular7",
   "repository": {
     "url": "https://github.com/finbourne/lusid-sdk-angular"
   },
@@ -19,7 +19,7 @@
     "email": "lusid-sdk-angular.issues@finbourne.com"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.0",
-    "@angular/core": "^6.0.0"
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0"
   }
 }
