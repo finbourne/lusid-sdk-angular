@@ -8,7 +8,7 @@ Get-ChildItem -Path $genFullDir -Include * | Remove-Item -Recurse
 # Generate the required files
 docker run --rm -v ${baseDir}:/local `
     swaggerapi/swagger-codegen-cli generate `
-    -i https://api.finbourne.com/swagger/v0/swagger.json `
+    -i https://api.lusid.com/swagger/v0/swagger.json `
     -l typescript-angular `
     -o /local/$genRelDir
 
