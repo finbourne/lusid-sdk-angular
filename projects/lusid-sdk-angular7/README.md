@@ -1,6 +1,6 @@
-# LUSID<sup>®</sup> angular (6+) SDK
+# LUSID<sup>®</sup> angular (7) SDK
 
-This repository enables the generation of an angular (6+) SDK from the FINBOURNE OpenAPI specification using the [swagger-codegen](https://github.com/swagger-api/swagger-codegen) tool.
+This repository enables the generation of an angular (7) SDK from the FINBOURNE OpenAPI specification using the [swagger-codegen](https://github.com/swagger-api/swagger-codegen) tool.
 
 The code required to generate the SDK is in the `projects/lusid-sdk-angular7` folder, and the most up to date version of the OpenAPI specification can be downloaded from https://api.finbourne.com/swagger/v0/swagger.json
 
