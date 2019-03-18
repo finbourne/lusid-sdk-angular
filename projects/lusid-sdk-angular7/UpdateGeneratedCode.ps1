@@ -10,7 +10,8 @@ docker run --rm -v ${baseDir}:/local `
     swaggerapi/swagger-codegen-cli generate `
     -i https://api.lusid.com/swagger/v0/swagger.json `
     -l typescript-angular `
-    -o /local/$genRelDir
+    -o /local/$genRelDir `
+    --additional-properties ngVersion=7
 
 # Delay as otherwise files may still be in use
 Start-Sleep -Seconds 5
