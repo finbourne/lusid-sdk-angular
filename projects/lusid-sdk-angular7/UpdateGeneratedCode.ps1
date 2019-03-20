@@ -19,5 +19,5 @@ Start-Sleep -Seconds 5
 # Modify the generated code for angular 6
 $tsFiles = Get-ChildItem -Path $genFullDir -Filter *.ts -Recurse
 foreach ($file in $tsFiles) {
-    ( Get-Content $file.FullName) | ForEach-Object { $_ -replace "from 'rxjs/Observable';", "from 'rxjs';" } | Set-Content $file.FullName
+    ( Get-Content $file.FullName) | ForEach-Object { $_ -replace "from 'rxjs';", "from 'rxjs';" } | Set-Content $file.FullName
 }
