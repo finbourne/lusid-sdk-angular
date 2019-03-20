@@ -14,10 +14,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-The SDK can also be built by running the following in the root folder:
+The SDK can also be built by running the following script in the root folder passiing the url of the LUSID API swagger file:
 
 ```
-$ docker-compose up && docker-compose rm -f
+$ ./build.sh http://api.lusid.com/swagger/v0/swagger.json
 ```
 
 ## Running unit tests

@@ -1,6 +1,6 @@
 {
   "name": "@finbourne/lusid-sdk-angular7",
-  "version": "0.9.181-alpha",
+  "version": "0.9.187-alpha",
   "description": "An angular (7+) SDK for secure access to the LUSID&reg; by FINBOURNE web API",
   "keywords": [
     "LUSID",
