@@ -7,5 +7,5 @@ services:
     build: .
     image: finbourne/lusid-sdk-angular-gen
     volumes:
-      - .:/usr/swagger
+      - .:/usr/src
     command: lusid.json
