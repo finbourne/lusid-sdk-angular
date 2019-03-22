@@ -29,7 +29,7 @@ find $sdk_output_folder -type f | xargs -I £ sed -i 's/rxjs\/Observable/rxjs/g'
 
 cd $gen_root
 
-sdk_version=$(cat $swagger_file | jq -r '.info.version')-alpha
+sdk_version=$(cat $swagger_file | jq -r '.info.version')
 echo $sdk_version
 
 echo "updating version in package.json to '$sdk_version'"
