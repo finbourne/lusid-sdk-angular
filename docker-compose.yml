@@ -4,8 +4,6 @@ services:
 
   lusid-sdk-angular-gen:
     container_name: lusid-sdk-angular-gen
-    environment:
-      - NG_CLI_ANALYTICS=ci
     build: .
     image: finbourne/lusid-sdk-angular-gen
     volumes:
