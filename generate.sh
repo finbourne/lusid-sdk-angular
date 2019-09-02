@@ -14,6 +14,9 @@ swagger_file=$gen_root/$1
 echo "swagger file $gen_root/$1"
 echo "sdk output folder: $angusdk_output_folderlarVersion"
 
+export NG_CLI_ANALYTICS=ci
+echo "NG_CLI_ANALYTICS=$NG_CLI_ANALYTICS"
+
 # remove all previously generated files
 shopt -s extglob
 echo "removing previous sdk:"
