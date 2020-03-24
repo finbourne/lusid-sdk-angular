@@ -1,6 +1,9 @@
 {
   "name": "my-first-project",
   "version": "0.0.0",
+  "resolutions": {
+    "minimist": "^1.2.3"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
