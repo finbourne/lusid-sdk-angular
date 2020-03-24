@@ -12,18 +12,19 @@ gen_root=/usr/src
 sdk_output_folder=$gen_root/projects/lusid-sdk-angular$angular_version/src/lib/generated
 swagger_file=$gen_root/$1
 echo "swagger file $gen_root/$1"
-echo "sdk output folder: $angusdk_output_folderlarVersion"
+echo "sdk output folder: $sdk_output_folder"
 
+echo "stop ng from prompting to use analytics (NG_CLI_ANALYTICS=ci)"
 export NG_CLI_ANALYTICS=ci
 echo "NG_CLI_ANALYTICS=$NG_CLI_ANALYTICS"
 
 # remove all previously generated files
 shopt -s extglob
-echo "removing previous sdk:"
+echo "removing previous sdk: folder=$sdk_output_folder"
 rm -rf $sdk_output_folder/
 shopt -u extglob
 
-echo "generating the LUSID API sdk"
+echo "generating the LUSID API sdk (angular version '$angular_version')"
 
 java -jar /usr/swaggerjar/swagger-codegen-cli.jar generate \
     -i $swagger_file \
@@ -32,19 +33,26 @@ java -jar /usr/swaggerjar/swagger-codegen-cli.jar generate \
     -c $gen_root/config.json \
     --additional-properties ngVersion=$angular_version
 
+echo "Modifying the generated code for angular 6+"
 find $sdk_output_folder -type f | xargs -I £ sed -i 's/rxjs\/Observable/rxjs/g' £
+echo "Modified the generated code for angular 6+"
 
 cd $gen_root
 
 sdk_version=$(cat $swagger_file | jq -r '.info.version')
-echo $sdk_version
 
 echo "updating version in package.json to '$sdk_version'"
 package_json=$gen_root/projects/lusid-sdk-angular$angular_version/package.json
 cat $package_json | jq -r --arg SDK_VERSION "$sdk_version" '.version |= $SDK_VERSION' > temp && mv temp $package_json
 
-echo "installing packages"
+echo "node version: $(node --version)"
+echo "npm version: $(npm --version)"
+
+echo "installing packages (using 'npm ci')"
 npm ci
 
-echo "running ng build"
+echo "ng version"
+ng --version
+
+echo "running ng build ('ng build lusid-sdk-angular$angular_version --prod')"
 ng build lusid-sdk-angular$angular_version
