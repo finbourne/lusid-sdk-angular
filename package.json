@@ -1,9 +1,6 @@
 {
   "name": "my-first-project",
   "version": "0.0.0",
-  "resolutions": {
-    "minimist": "^1.2.3"
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -51,5 +48,10 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "resolutions": {
+    "minimist": "^1.2.3",
+    "acorn": "^6.4.1",
+    "kind-of": "^6.0.3"
   }
 }
