@@ -1,7 +1,8 @@
 {
-  "name": "my-first-project",
+  "name": "lusid-angular-sdk",
   "version": "0.0.0",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -37,7 +38,7 @@
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.1.0",
+    "karma": "^5.0.2",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
@@ -51,7 +52,6 @@
   },
   "resolutions": {
     "minimist": "^1.2.3",
-    "acorn": "^6.4.1",
-    "kind-of": "^6.0.3"
+    "https-proxy-agent": "^2.2.3"
   }
 }
