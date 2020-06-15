@@ -26,11 +26,13 @@ shopt -u extglob
 
 echo "generating the LUSID API sdk (angular version '$angular_version')"
 
-java -jar /usr/swaggerjar/swagger-codegen-cli.jar generate \
+java -jar /usr/swaggerjar/openapi-generator-cli.jar generate \
     -i $swagger_file \
-    -l typescript-angular \
+    -g typescript-angular \
     -o $sdk_output_folder \
     -c $gen_root/config.json \
+    --type-mappings object=any \
+    --additional-properties supportsES6=true \
     --additional-properties ngVersion=$angular_version
 
 echo "Modifying the generated code for angular 6+"

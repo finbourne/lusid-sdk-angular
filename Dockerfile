@@ -10,7 +10,7 @@ RUN apt-get update && \
     npm install -g @angular/cli && \
     apt-get -y install jq
 
-RUN wget https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.4.8/swagger-codegen-cli-2.4.8.jar -O /usr/swaggerjar/swagger-codegen-cli.jar
+RUN wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/4.0.3/openapi-generator-cli-4.0.3.jar -O openapi-generator-cli.jar
 
 ADD generate.sh .
 
