@@ -11,7 +11,8 @@ angular_version=8;
 gen_root=/usr/src
 sdk_output_folder=$gen_root/projects/lusid-sdk-angular$angular_version/src/lib/generated
 swagger_file=$gen_root/$1
-echo "swagger file $gen_root/$1"
+echo "gen_root $gen_root"
+echo "swagger file $swagger_file"
 echo "sdk output folder: $sdk_output_folder"
 
 echo "stop ng from prompting to use analytics (NG_CLI_ANALYTICS=ci)"
@@ -31,7 +32,7 @@ java -jar /usr/swaggerjar/openapi-generator-cli.jar generate \
     -g typescript-angular \
     -o $sdk_output_folder \
     -c $gen_root/config.json \
-    --type-mappings object=any \
+     --type-mappings object=any \
     --additional-properties supportsES6=true \
     --additional-properties ngVersion=$angular_version
 

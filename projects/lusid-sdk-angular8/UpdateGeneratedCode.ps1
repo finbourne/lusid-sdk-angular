@@ -10,7 +10,7 @@ Write-Output "baseDir is $baseDir"
 # Generate the required files
 docker run --rm -v ${baseDir}:/local `
     openapitools/openapi-generator-cli:v4.0.3 generate `
-    -i https://www.lusid.com/api/swagger/v0/swagger.json `
+    -i https://api.lusid.com/swagger/v0/swagger.json `
     -g typescript-angular `
     -o /local/$genRelDir `
     --type-mappings object=any `
