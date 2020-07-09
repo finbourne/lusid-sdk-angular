@@ -15,9 +15,8 @@ echo "gen_root $gen_root"
 echo "swagger file $swagger_file"
 echo "sdk output folder: $sdk_output_folder"
 
-echo "stop ng from prompting to use analytics (NG_CLI_ANALYTICS=ci)"
-export NG_CLI_ANALYTICS=ci
-echo "NG_CLI_ANALYTICS=$NG_CLI_ANALYTICS"
+echo "stop ng from prompting to use analytics (ng analytics off)"
+ng analytics off
 
 # remove all previously generated files
 shopt -s extglob
