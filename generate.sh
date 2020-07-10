@@ -6,7 +6,7 @@ if [[ ${#1} -eq 0 ]]; then
     exit 1
 fi
 
-angular_version=9;
+angular_version=8;
 
 gen_root=/usr/src
 sdk_output_folder=$gen_root/projects/lusid-sdk-angular$angular_version/src/lib/generated
