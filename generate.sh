@@ -1,12 +1,14 @@
 #!/bin/bash -e
 
+printf "ARGS: %s\n" "$*"
+
 if [[ ${#1} -eq 0 ]]; then
     echo
     echo "[ERROR] swagger file not specified"
     exit 1
 fi
 
-angular_version=8;
+angular_version=${2:-11};
 
 gen_root=/usr/src
 sdk_output_folder=$gen_root/projects/lusid-sdk-angular$angular_version/src/lib/generated
@@ -14,6 +16,7 @@ swagger_file=$gen_root/$1
 echo "gen_root $gen_root"
 echo "swagger file $swagger_file"
 echo "sdk output folder: $sdk_output_folder"
+echo "angular version $angular_version"
 
 echo "stop ng from prompting to use analytics (ng analytics off)"
 ng analytics off
@@ -31,13 +34,9 @@ java -jar /usr/swaggerjar/openapi-generator-cli.jar generate \
     -g typescript-angular \
     -o $sdk_output_folder \
     -c $gen_root/config.json \
-     --type-mappings object=any \
+    --type-mappings object=any \
     --additional-properties supportsES6=true \
     --additional-properties ngVersion=$angular_version
-
-echo "Modifying the generated code for angular 6+"
-find $sdk_output_folder -type f | xargs -I £ sed -i 's/rxjs\/Observable/rxjs/g' £
-echo "Modified the generated code for angular 6+"
 
 cd $gen_root
 
@@ -56,5 +55,5 @@ npm ci
 echo "ng version"
 ng --version
 
-echo "running ng build ('ng build lusid-sdk-angular$angular_version --prod')"
+echo "building package ('ng build lusid-sdk-angular$angular_version')"
 ng build lusid-sdk-angular$angular_version

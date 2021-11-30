@@ -14,6 +14,6 @@ docker run --rm -v ${baseDir}:/local `
     -g typescript-angular `
     -o /local/$genRelDir `
     --type-mappings object=any `
-    --additional-properties ngVersion=9 `
+    --additional-properties ngVersion=11 `
     --additional-properties supportsES6=true
 
